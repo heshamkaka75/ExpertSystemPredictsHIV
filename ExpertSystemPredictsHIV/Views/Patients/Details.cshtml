@@ -1,0 +1,166 @@
+﻿@model ExpertSystemPredictsHIV.Models.Patient
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <br />
+       <h1 style="color: #1ab70d;">The Result...</h1>
+    <hr />
+    <h4>
+        <strong>@Html.DisplayFor(model => model.Name)</strong> is expected to be infected with HIV by @Html.DisplayFor(model => model.Total)%
+    </h4>
+    <hr />
+    <h1 style="color: #7b0202;">Symptoms and Diseases that he has</h1>
+    <hr />
+
+    <dl class="row">
+        <dt class = "col-sm-6">
+            <h3 style="color: #0408ff;">The Diseases</h3>
+        </dt>
+        <dd class = "col-sm-6">
+           <h3 style="color: #0408ff;"> Does he have it? </h3>
+        </dd>
+
+
+        <dt class = "col-sm-6">
+            fever الحمي
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.Fever == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Headache الصداع
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.Headache == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Diarrhea الإسهال
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.Diarrhea == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Weight loss فقدان الوزن
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.WeightLoss == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Cough السعال
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.Cough == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Night sweats التعرُّق الليلي
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.NightSweats == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Muscle and joint pain آلام العضلات والمفاصل
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.Musclepain == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Constant الإرهاق المستمر، غير المبرر
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.Constant == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Skin rash الطفح الجلدي
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.SkinRash == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Sore mouth ulcers التهاب الحلق وتقرحات فموية مؤلمة
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.SorePainfulMouthUlcers == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Swollen lymph nodes تورم العقد اللمفية، وخصوصًا في الرقبة
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.SwollenLymphNodes == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            White spots on tongue بقع بيضاء أو الآفات الغريبة على لسانك
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.WhiteSpotsOnTongue == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Rash or blisters الطفح الجلدي أو البثور
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.RashOrBlisters == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Ulceration in the mouth or genitals تقرح في الفم أو الأعضاء التناسلية
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.UlcerationInTheMouthOrGenitals == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Sexual intercourse الإتصال الجنسي
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.SexualIntercourse == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Sharing needles مشاركة الإبر
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.SharingNeedles == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Transfusion نقل الدم
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.Transfusion == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Blood pressure ضغط الدم
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.BloodPressure == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Diabetes السكري
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.Diabetes == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Heart disease امراض القلب
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.HeartDisease == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            Kidney disease الكلي
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.KidneyDisease == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+        <dt class = "col-sm-6">
+            stomach disease المعدة
+        </dt>
+        <dd class = "col-sm-6">
+            @if(Model.StomachDisease == 0){<p>No</p>} else {<p>Yes</p>}
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

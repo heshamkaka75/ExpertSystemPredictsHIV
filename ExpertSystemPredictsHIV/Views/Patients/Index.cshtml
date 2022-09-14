@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ExpertSystemPredictsHIV.Models.Patient>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Diagnosed Cases</h1>
+
+<table class="table table-hover table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                Full Name
+            </th>
+
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+            </td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

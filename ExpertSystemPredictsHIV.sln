@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertSystemPredictsHIV", "ExpertSystemPredictsHIV\ExpertSystemPredictsHIV.csproj", "{60911BE0-C4BA-42F4-A71E-C41B0801563E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60911BE0-C4BA-42F4-A71E-C41B0801563E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60911BE0-C4BA-42F4-A71E-C41B0801563E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60911BE0-C4BA-42F4-A71E-C41B0801563E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60911BE0-C4BA-42F4-A71E-C41B0801563E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50DDF438-ECB2-440D-9167-9ECC07B84404}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center HivHome">
+    <h1 class="display-4 headfont" style="color: #b70202;">HIV Diagnosis System...</h1>
+     <img src="~/images/hivred.jpg" style="width:400px;height:400px;"> 
+     <div class="hivhomebtn">
+
+        <a class="btn btn-success" asp-area="" asp-controller="Patients" asp-action="Create">New Diagnosis</a>
+        <a class="btn btn-warning" asp-area="" asp-controller="Patients" asp-action="index">Old Cases</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="index">Examination Locations</a>
+        <a class="btn btn-info" asp-area="" asp-controller="Home" asp-action="index">Asking for Help</a>
+     </div>
+</div>
+
+

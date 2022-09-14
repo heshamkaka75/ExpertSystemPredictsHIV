@@ -1,0 +1,432 @@
+﻿@model ExpertSystemPredictsHIV.Models.Patient
+
+@{
+    ViewData["Title"] = "New Diagnosis";
+}
+
+<h1 style="color: #622500e3;">New Diagnosis</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    Persional Information</a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                  <div class="panel-body">
+
+                        <div class="form-group">
+                            <label asp-for="Name" class="control-label">Full Name</label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Age" class="control-label"></label>
+                            <input asp-for="Age" class="form-control" />
+                            <span asp-validation-for="Age" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Gender</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Gender" type="radio" value="Male" class="form-check-input" name="Gender" checked>Male
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Gender" type="radio" value="Female" class="form-check-input" name="Gender">Female
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Marital Status</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="MaritalStatus" type="radio" value="Married" class="form-check-input" name="MaritalStatus" checked>Married
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="MaritalStatus" type="radio" value="Not Married" class="form-check-input" name="MaritalStatus">not Married
+                              </label>
+                            </div>
+                        </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    Common Diseases</a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">
+
+                      <div class="form-group">
+                            <label class="control-label">Blood Pressure - ضغط الدم</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="BloodPressure" type="radio" value="1" class="form-check-input" name="BloodPressure">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="BloodPressure" type="radio" value="0" class="form-check-input" name="BloodPressure" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Diabetes - السكري</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Diabetes" type="radio" value="1" class="form-check-input" name="Diabetes">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Diabetes" type="radio" value="0" class="form-check-input" name="Diabetes" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">HeartDisease - امراض القلب</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="HeartDisease" type="radio" value="1" class="form-check-input" name="HeartDisease">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="HeartDisease" type="radio" value="0" class="form-check-input" name="HeartDisease" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">KidneyDisease - امراض الكلي</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="KidneyDisease" type="radio" value="1" class="form-check-input" name="KidneyDisease">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="KidneyDisease" type="radio" value="0" class="form-check-input" name="KidneyDisease" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">StomachDisease - امراض المعدة</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="StomachDisease" type="radio" value="1" class="form-check-input" name="StomachDisease">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="StomachDisease" type="radio" value="0" class="form-check-input" name="StomachDisease" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                    The Symptoms</a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                  <div class="panel-body">
+
+                      <div class="form-group">
+                            <label class="control-label">Fever - الحمي</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Fever" type="radio" value="1" class="form-check-input" name="Fever">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Fever" type="radio" value="0" class="form-check-input" name="Fever" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="control-label">Headache - الصداع</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Headache" type="radio" value="1" class="form-check-input" name="Headache">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Headache" type="radio" value="0" class="form-check-input" name="Headache" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Diarrhea - الاسهال</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Diarrhea" type="radio" value="1" class="form-check-input" name="Diarrhea">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Diarrhea" type="radio" value="0" class="form-check-input" name="Diarrhea" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Weight Loss - نقص الوزن</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="WeightLoss" type="radio" value="1" class="form-check-input" name="WeightLoss">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="WeightLoss" type="radio" value="0" class="form-check-input" name="WeightLoss" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label">Cough - السعال</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Cough" type="radio" value="1" class="form-check-input" name="Cough">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Cough" type="radio" value="0" class="form-check-input" name="Cough" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label">NightSweats - التعرق الليلي</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="NightSweats" type="radio" value="1" class="form-check-input" name="NightSweats">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="NightSweats" type="radio" value="0" class="form-check-input" name="NightSweats" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label">Muscle and joint pain - آلام العضلات والمفاصل</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Musclepain" type="radio" value="1" class="form-check-input" name="Musclepain">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Musclepain" type="radio" value="0" class="form-check-input" name="Musclepain" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label">Constant - الإرهاق المستمر، غير المبرر</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Constant" type="radio" value="1" class="form-check-input" name="Constant">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Constant" type="radio" value="0" class="form-check-input" name="Constant" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="control-label">Skin Rash - الطفح الجلدي</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="SkinRash" type="radio" value="1" class="form-check-input" name="SkinRash">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="SkinRash" type="radio" value="0" class="form-check-input" name="SkinRash" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label">Sore Painful Mouth Ulcers - التهاب الحلق وتقرحات فموية مؤلمة</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="SorePainfulMouthUlcers" type="radio" value="1" class="form-check-input" name="SorePainfulMouthUlcers">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="SorePainfulMouthUlcers" type="radio" value="0" class="form-check-input" name="SorePainfulMouthUlcers" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label">Swollen Lymph Nodes - تورم العقد اللمفية، وخصوصًا في الرقبة</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="SwollenLymphNodes" type="radio" value="1" class="form-check-input" name="SwollenLymphNodes">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="SwollenLymphNodes" type="radio" value="0" class="form-check-input" name="SwollenLymphNodes" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label">White Spots On Tongue - بقع بيضاء أو الآفات الغريبة على لسانك</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="WhiteSpotsOnTongue" type="radio" value="1" class="form-check-input" name="WhiteSpotsOnTongue">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="WhiteSpotsOnTongue" type="radio" value="0" class="form-check-input" name="WhiteSpotsOnTongue" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Rash Or Blisters - الطفح الجلدي أو البثور</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="RashOrBlisters" type="radio" value="1" class="form-check-input" name="RashOrBlisters">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="RashOrBlisters" type="radio" value="0" class="form-check-input" name="RashOrBlisters" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Ulceration In The Mouth Or Genitals - تقرح في الفم أو الأعضاء التناسلية</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="UlcerationInTheMouthOrGenitals" type="radio" value="1" class="form-check-input" name="UlcerationInTheMouthOrGenitals">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="UlcerationInTheMouthOrGenitals" type="radio" value="0" class="form-check-input" name="UlcerationInTheMouthOrGenitals" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Sexual Intercourse - الإتصال الجنسي</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="SexualIntercourse" type="radio" value="1" class="form-check-input" name="SexualIntercourse">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="SexualIntercourse" type="radio" value="0" class="form-check-input" name="SexualIntercourse" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Sharing Needles - مشاركة الإبر</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="SharingNeedles" type="radio" value="1" class="form-check-input" name="SharingNeedles">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="SharingNeedles" type="radio" value="0" class="form-check-input" name="SharingNeedles" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Transfusion - نقل الدم</label>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Transfusion" type="radio" value="1" class="form-check-input" name="Transfusion">Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input asp-for="Transfusion" type="radio" value="0" class="form-check-input" name="Transfusion" checked>No
+                              </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+
+                  </div>
+                </div>
+              </div>
+            </div> 
+
+        </form>
+    </div>
+</div>
+<br /><hr />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
