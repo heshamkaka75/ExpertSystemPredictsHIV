@@ -14,7 +14,6 @@
             </th>
 
             <th>Action</th>
-            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -24,12 +23,22 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             
+            @if (User.Identity.Name == "admin@hiv.com")
+                    {
             <td>
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
+                    }
+                    else
+                    {
             <td>
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
+                    }
+
+
+
         </tr>
 }
     </tbody>

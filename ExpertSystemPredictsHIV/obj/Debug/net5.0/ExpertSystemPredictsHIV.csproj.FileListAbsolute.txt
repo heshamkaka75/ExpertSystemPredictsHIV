@@ -162,3 +162,9 @@ D:\Hesham_IDB\Diagnose HIV\ExpertSystemPredictsHIV\ExpertSystemPredictsHIV\obj\D
 D:\Hesham_IDB\Diagnose HIV\ExpertSystemPredictsHIV\ExpertSystemPredictsHIV\obj\Debug\net5.0\ExpertSystemPredictsHIV.pdb
 D:\Hesham_IDB\Diagnose HIV\ExpertSystemPredictsHIV\ExpertSystemPredictsHIV\obj\Debug\net5.0\ExpertSystemPredictsHIV.genruntimeconfig.cache
 D:\Hesham_IDB\Diagnose HIV\ExpertSystemPredictsHIV\ExpertSystemPredictsHIV\obj\Debug\net5.0\ref\ExpertSystemPredictsHIV.dll
+D:\Hesham_IDB\Diagnose HIV\ExpertSystemPredictsHIV\ExpertSystemPredictsHIV\obj\Debug\net5.0\Razor\Views\Hospitals\Create.cshtml.g.cs
+D:\Hesham_IDB\Diagnose HIV\ExpertSystemPredictsHIV\ExpertSystemPredictsHIV\obj\Debug\net5.0\Razor\Views\Hospitals\Delete.cshtml.g.cs
+D:\Hesham_IDB\Diagnose HIV\ExpertSystemPredictsHIV\ExpertSystemPredictsHIV\obj\Debug\net5.0\Razor\Views\Hospitals\Details.cshtml.g.cs
+D:\Hesham_IDB\Diagnose HIV\ExpertSystemPredictsHIV\ExpertSystemPredictsHIV\obj\Debug\net5.0\Razor\Views\Hospitals\Edit.cshtml.g.cs
+D:\Hesham_IDB\Diagnose HIV\ExpertSystemPredictsHIV\ExpertSystemPredictsHIV\obj\Debug\net5.0\Razor\Views\Hospitals\Index.cshtml.g.cs
+D:\Hesham_IDB\Diagnose HIV\ExpertSystemPredictsHIV\ExpertSystemPredictsHIV\obj\Debug\net5.0\Razor\Views\Home\Help.cshtml.g.cs

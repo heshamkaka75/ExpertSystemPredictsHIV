@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ExpertSystemPredictsHIV.Models.Hospital>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>AIDS Testing Laboratories</h1>
+
+<br />
+<table class="table table-hover table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                Lab Name
+            </th>
+            <th>
+                Lab State
+            </th>
+            <th>
+                Lab Address
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+
+                                @if (User.Identity.Name == "admin@hiv.com")
+                    {
+                        <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+                    }
+                    else
+                    {
+                      <td>
+                
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                
+            </td>
+                    }
+
+        </tr>
+}
+    </tbody>
+</table>
+<br />
+
+@if (User.Identity.Name == "admin@hiv.com")
+{
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+}
+else
+{
+
+}
+
+

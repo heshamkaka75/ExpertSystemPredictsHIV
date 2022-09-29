@@ -23,10 +23,16 @@ namespace ExpertSystemPredictsHIV.Controllers
         public async Task<IActionResult> Index()
         {
             var IsLoging = User.Identity.IsAuthenticated;
+            var IsAdmin = User.Identity.Name;
 
             if (IsLoging == false)
             {
                 return LocalRedirect("~/identity/Account/Login");
+            }
+
+            if (IsAdmin != "admin@hiv.com")
+            {
+                return RedirectToAction("Index", "Home");
             }
 
             return View(await _context.Patients.ToListAsync());
